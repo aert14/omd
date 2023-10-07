@@ -120,7 +120,7 @@ def proccess_request(request: int = None) -> None:
     if request == 1:
         hierarchy = get_hierarchy()
         print_hierarchy(dict(hierarchy.items()))
-    if request == 2:
+    elif request == 2:
         report = get_report()
         print_report(report)
     else:
