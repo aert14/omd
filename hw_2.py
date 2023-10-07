@@ -134,4 +134,5 @@ def programm() -> None:
     print()
     proccess_request(request)
 
-programm()
+ if __name__ == '__main__':
+     programm()
