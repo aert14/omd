@@ -2,13 +2,12 @@ class CountVectorizer():
     """Преобразование текста в матрицу количества лексем."""
 
 
-    def __init__(self: "CountVectorizer") -> None:
-        """Конструктор класса CountVectorizer."""
-        self.sent_list = [] # для хранения словарей с токенами предложений
-
-
     def fit_transform(self: "CountVectorizer", corpus: list[str]) -> list[list[int]]:
         """Возвращает матрицу количестве лексем, полученную из корпуса."""
+
+        # по аналогии с sklearn храним данные только текущего корпуса
+        self.sent_list = [] # для хранения словарей с токенами предложений
+
         for sent_indx, sentence in enumerate(corpus):
             self.sent_list.append({})
 
