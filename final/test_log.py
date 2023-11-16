@@ -39,3 +39,5 @@ def test_pickup_log(capsys):
     test_obj.pickup()
     captured = capsys.readouterr()
     assert "🏡Забрали" in captured.out
+if __name__ == "__main__":
+    pass
