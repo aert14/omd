@@ -34,7 +34,7 @@ def order(pizza_name: str, size: str, delivery: bool, toppings: tuple[str]) -> N
 
 @cli.command(help = "Show the menu")
 
-def menu():
+def menu() -> None:
     """Show the menu."""
     print(
     "- Margherita 🧀: tomato sauce, mozzarella, tomatoes\n"

@@ -1,5 +1,6 @@
 from logs import log
 
+
 class Pizza:
     """Base Pizza class."""
 
@@ -21,7 +22,7 @@ class Pizza:
         """Добавляет топпинги."""
         print("Добавлены топпинги:", end=" ")
         for topping in toppings:
-            print(topping, end=" ")
+            print(topping, end = " ")
         print()
 
     @log("🍳Приготовили за {}c")
