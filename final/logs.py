@@ -21,3 +21,5 @@ def log(params: str) -> object:
 
         return wrapper
     return decorator
+if __name__ == "__main__":
+    pass
