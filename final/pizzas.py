@@ -66,3 +66,6 @@ class HawaiianPizza(Pizza):
         super().__init__(size)
         self.name = "Hawaiian"
         self.recept = "tomato sauce, mozzarella, chicken, pineapples"
+
+if __name__ == "__main__":
+    pass
