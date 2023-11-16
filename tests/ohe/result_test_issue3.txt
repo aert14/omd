@@ -1,0 +1,19 @@
+command: python -m unittest test_issue3.py -v
+result:
+test_fit_transform (issue3.TestOHE)
+Test case with multiply categories. ... ok
+test_fit_transform_duplicate_categories (issue3.TestOHE)
+Test case with duplicate categories. ... ok
+test_fit_transform_no_categories (issue3.TestOHE)
+Test case with empty input. ... ok
+test_fit_transform_not_none (issue3.TestOHE)
+Test case when fit_transform returns not None. ... ok
+test_fit_transform_single_category (issue3.TestOHE)
+Test case with single category. ... ok
+test_fit_transform_type (issue3.TestOHE)
+Test case when fit_transform returns list. ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+OK

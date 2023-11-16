@@ -1,0 +1,32 @@
+1) command: python -m pytest test_issue5.py -v
+result:
+======================================================================================================= test session starts ========================================================================================================
+platform win32 -- Python 3.10.6, pytest-7.4.3, pluggy-1.3.0 -- C:\Users\Артём\AppData\Local\Programs\Python\Python310\python.exe
+cachedir: .pytest_cache
+rootdir: A:\AAA_algo_HW\tests
+plugins: anyio-3.6.1, Faker-19.12.0, cov-4.1.0
+collected 3 items
+
+issue5.py::test_ymd_format PASSED                                                                                                                                                                                             [ 33%]
+issue5.py::test_dmy_format PASSED                                                                                                                                                                                             [ 66%] 
+issue5.py::test_invalid_format PASSED                                                                                                                                                                                         [100%] 
+
+======================================================================================================== 3 passed in 0.13s ========================================================================================================= 
+
+
+
+2) commamd: python -m pytest -q test_issue5.py -v --cov=what_is_year_now --cov-report html
+result:
+======================================================================================================= test session starts ========================================================================================================
+platform win32 -- Python 3.10.6, pytest-7.4.3, pluggy-1.3.0
+rootdir: A:\AAA_algo_HW\tests
+plugins: anyio-3.6.1, Faker-19.12.0, cov-4.1.0
+collected 3 items
+
+test_issue5.py ...                                                                                                                                                                                                            [100%]
+
+---------- coverage: platform win32, python 3.10.6-final-0 -----------
+Coverage HTML written to dir htmlcov
+
+
+======================================================================================================== 3 passed in 0.26s ========================================================================================================= 
