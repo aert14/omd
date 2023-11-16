@@ -20,3 +20,6 @@ def test_order_pizza_no_toppings():
     assert "Добавлены" not in result
     assert "🍳Приготовили" in result
     assert "🛵Доставили" in result
+
+if __name__ == "__main__":
+    pass
