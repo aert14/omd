@@ -2,7 +2,6 @@ import contextlib
 import io
 import sys
 
-import pytest
 from pizzas import HawaiianPizza, MargheritaPizza, PepperoniPizza
 
 
@@ -40,3 +39,5 @@ def test_dict():
         pizza.dict()
         output = buf.getvalue()
     assert output == "Рецепт: tomato sauce, mozzarella, tomatoes\n"
+if __name__ == "__main__":
+    pass
