@@ -1,4 +1,3 @@
-import pytest
 from pizza_factory import create_pizza
 from pizzas import HawaiianPizza, MargheritaPizza, PepperoniPizza
 
@@ -20,3 +19,5 @@ def test_create_hawaiian_pizza():
     pizza = create_pizza("hawaiian", "L")
     assert isinstance(pizza, HawaiianPizza)
     assert pizza.size == "L"
+if __name__ == "__main__":
+    pass
