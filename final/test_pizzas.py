@@ -1,6 +1,5 @@
 import contextlib
 import io
-import sys
 
 from pizzas import HawaiianPizza, MargheritaPizza, PepperoniPizza
 

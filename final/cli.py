@@ -23,6 +23,7 @@ def cli():
             help="The toppings for the pizza")
 
 def order(pizza_name: str, size: str, delivery: bool, toppings: tuple[str]) -> None:
+    """Ordering pizza"""
     ordered_pizza = create_pizza(pizza_name, size) # создаем экземпляр пиццы
     if toppings: # если есть топпинги, добавляем их
         ordered_pizza.add_toppings(toppings)

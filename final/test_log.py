@@ -1,4 +1,3 @@
-import pytest
 from logs import log
 
 
