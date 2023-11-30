@@ -24,3 +24,8 @@ def test_stick():
     advert = Advert(json.loads(json_str))
     expected = "\033[33mВельш-корги | 1000₽\033[0m"
     assert str(advert) == expected
+
+
+if __name__ == "__main__":
+    test_color()
+    test_stick()

@@ -65,3 +65,12 @@ def test_advert_missing_title():
     """Test for advert missing title."""
     with pytest.raises(ValueError, match="Missing 'title' attribute"):
         Advert({})
+
+
+if __name__ == "__main__":
+    test_lesson()
+    test_dog()
+    test_negative_price_1()
+    test_negative_price_2()
+    test_not_set_price()
+    test_advert_missing_title()
