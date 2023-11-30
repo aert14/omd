@@ -18,13 +18,15 @@ class ColorizeMixin:
         mg = f"\033[{self.repr_color_code}m{self.title} | {self.price}₽\033[0m"
         return mg
 
+
 class Advert(ColorizeMixin, Advert):
     """Modified Advert class."""
 
     repr_color_code = 33
 
+
 if __name__ == "__main__":
-    json_str =  """{
+    json_str = """{
     "title": "Вельш-корги",
     "price": 1000,
     "class": "dogs"

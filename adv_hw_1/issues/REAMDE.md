@@ -1,0 +1,1 @@
+To run the test write "python -m pytest" in your terminal.

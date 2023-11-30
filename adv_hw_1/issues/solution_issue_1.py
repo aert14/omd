@@ -17,13 +17,13 @@ class Advert:
             msg = "Missing 'title' attribute"
             raise ValueError(msg)
 
-
     @property
     def price(self) -> int:
         """Get price of advert."""
         if not hasattr(self, "_price"):
             self._price = 0
         return self._price
+
     @price.setter
     def price(self, value) -> None:
         """Set price of advert."""
@@ -32,12 +32,12 @@ class Advert:
             raise ValueError(msg)
         self._price = value
 
-
     def __setattr__(self, __name: str, __value: any) -> None:
-        """Modified setattr for proccesing keywords."""
+        """Modify setattr for processing keywords."""
         if keyword.iskeyword(__name):
             __name += "_"
         super().__setattr__(__name, __value)
+
 
 if __name__ == "__main__":
     lesson_str = """{
@@ -52,4 +52,3 @@ if __name__ == "__main__":
     lesson_ad = Advert(lesson)
     print(lesson_ad.location.address)
     print(lesson_ad.price)
-

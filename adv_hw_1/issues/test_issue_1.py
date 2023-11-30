@@ -1,3 +1,4 @@
+import contextlib
 import json
 
 import pytest
@@ -19,6 +20,7 @@ def test_lesson():
     assert lesson_ad.location.address == "город Москва, Лесная, 7"
     assert lesson_ad.price == 0
 
+
 def test_dog():
     """Test for dog."""
     dog_str = """{
@@ -28,28 +30,28 @@ def test_dog():
     }"""
     dog = json.loads(dog_str)
     dog_ad = Advert(dog)
-    assert dog_ad.class_ == "dogs"
-    assert dog_ad.price == 1000
+    expected = ["dogs", 1000]
+    assert dog_ad.class_ == expected[0]
+    assert dog_ad.price == expected[1]
+
 
 def test_negative_price_1():
     """Test for negative price."""
     lesson_str = '{"title": "python", "price": -1}'
     lesson = json.loads(lesson_str)
 
-    try:
+    with contextlib.suppress(ValueError):
         Advert(lesson)
-    except ValueError:
-        pass
+
 
 def test_negative_price_2():
     """Test for negative price."""
     lesson_str = '{"title": "python"}'
     lesson = json.loads(lesson_str)
     lesson_ad = Advert(lesson)
-    try:
+    with contextlib.suppress(ValueError):
         lesson_ad.price = -3
-    except ValueError:
-        pass
+
 
 def test_not_set_price():
     """Test for not set price."""
@@ -58,10 +60,8 @@ def test_not_set_price():
     lesson_ad = Advert(lesson)
     assert lesson_ad.price == 0
 
+
 def test_advert_missing_title():
     """Test for advert missing title."""
     with pytest.raises(ValueError, match="Missing 'title' attribute"):
         Advert({})
-
-
-        
